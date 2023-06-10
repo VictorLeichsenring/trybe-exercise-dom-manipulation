@@ -7,3 +7,4 @@ const branco = document.getElementsByClassName('center-content');
 branco[0].style.backgroundColor = 'white';
 const title = document.getElementsByClassName('title');
 title[0].innerText = 'Desafio - JavaScript';
+vision[0].innerText = vision[0].innerText.toUpperCase();
