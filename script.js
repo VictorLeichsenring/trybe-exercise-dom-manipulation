@@ -1,15 +1,41 @@
 // Seu código aqui
-const vision = document.getElementsByTagName('p');
-vision[1].innerText = 'Estar em destaque no mercado de trabalho.';
-const greenBox = document.getElementsByClassName('main-content');
-greenBox[0].style.backgroundColor = 'rgb(76, 164, 109)';
-const whiteBox = document.getElementsByClassName('center-content');
-whiteBox[0].style.backgroundColor = 'white';
-const title = document.getElementsByClassName('title');
-title[0].innerText = 'Desafio - JavaScript';
-vision[0].innerText = vision[0].innerText.toUpperCase();
-let footer = '';
-for (let i = 0; i < vision.length - 1; i += 1) {
-  footer += ` ${vision[i].innerText}`;
+function vision(msg) {
+  const paragraphList = document.getElementsByTagName('p');
+  paragraphList[1].innerText = msg;
 }
-vision[vision.length - 1].innerText = footer;
+
+function greenBox() {
+  const box = document.getElementsByClassName('main-content');
+  box[0].style.backgroundColor = 'rgb(76, 164, 109)';
+}
+
+function whiteBox() {
+  const box = document.getElementsByClassName('center-content');
+  box[0].style.backgroundColor = 'white';
+}
+
+function title(newTitle) {
+  const titleList = document.getElementsByClassName('title');
+  titleList[0].innerText = newTitle;
+}
+
+function upperCaseParagraph() {
+  const paragraphList = document.getElementsByTagName('p');
+  paragraphList[0].innerText = paragraphList[0].innerText.toUpperCase();
+}
+
+function footerContent() {
+  const paragraphList = document.getElementsByTagName('p');
+  let footer = '';
+  for (let i = 0; i < paragraphList.length - 1; i += 1) {
+    footer += ` ${paragraphList[i].innerText}`;
+  }
+  paragraphList[paragraphList.length - 1].innerText = footer;
+}
+
+vision('Estar em destaque no mercado de trabalho.');
+greenBox();
+whiteBox();
+title('Desafio - JavaScript');
+upperCaseParagraph();
+footerContent();
